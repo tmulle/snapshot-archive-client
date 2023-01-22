@@ -44,7 +44,8 @@ public interface SnapshotArchiveClient {
                           @QueryParam("limit") String recordLimit,
                           @QueryParam("skip") String skipRecord,
                           @QueryParam("sortyBy") String sortFields,
-                          @QueryParam("sortDir") String sortDir);
+                          @QueryParam("sortDir") String sortDir,
+                          @QueryParam("filename") String filename);
 
     @GET
     @Path("/{id}")

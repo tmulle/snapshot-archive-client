@@ -55,11 +55,14 @@ public class ListCommand extends ReusableOptions implements Runnable {
     @CommandLine.Option(names = { "-sdr", "--sortDir" }, paramLabel = "SORTDIR", description = "ASC or DESC sorting")
     String sortDir;
 
+    @CommandLine.Option(names = { "-fn", "--filename" }, paramLabel = "FILENAME", description = "Name of file to search for")
+    String filename;
+
 
     @Override
     public void run() {
         SnapshotArchiveClient client = getClient(host, port);
-        List<FileInfo> all = client.getAll(ticketNumber, startDate, endDate, recordLimit, skipRecord, sortFields, sortDir);
+        List<FileInfo> all = client.getAll(ticketNumber, startDate, endDate, recordLimit, skipRecord, sortFields, sortDir, filename);
         try {
             mapper.writeValue(System.out, all);
         } catch (IOException e) {
