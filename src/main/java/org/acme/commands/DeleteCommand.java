@@ -4,6 +4,11 @@ import org.acme.client.SnapshotArchiveClient;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 
+/**
+ * Delete a file from the system
+ *
+ * @author tmulle
+ */
 @Command(description = "Delete a file", name = "delete")
 public class DeleteCommand extends ReusableOptions implements Runnable {
 

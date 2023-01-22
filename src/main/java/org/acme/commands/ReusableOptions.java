@@ -6,6 +6,12 @@ import picocli.CommandLine;
 
 import java.net.URI;
 
+/**
+ * Class that stores common command line options
+ * to be used by other child classes
+ *
+ * @author tmulle
+ */
 @CommandLine.Command(synopsisHeading      = "%nUsage:%n%n",
         descriptionHeading   = "%nDescription:%n%n",
         parameterListHeading = "%nParameters:%n%n",

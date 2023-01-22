@@ -13,6 +13,11 @@ import java.nio.file.Paths;
 
 import static java.nio.file.StandardCopyOption.REPLACE_EXISTING;
 
+/**
+ * Downloads a file
+ *
+ * @author tmulle
+ */
 @Command(description = "Download a file", name = "download")
 public class DownloadCommand extends ReusableOptions implements Runnable {
 

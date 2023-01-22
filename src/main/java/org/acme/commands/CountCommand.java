@@ -5,6 +5,11 @@ import picocli.CommandLine.Command;
 
 import javax.ws.rs.core.Response;
 
+/**
+ * Return the number of records
+ *
+ * @author tmulle
+ */
 @Command(description = "Get the total record count", name = "count")
 public class CountCommand extends ReusableOptions implements Runnable {
 

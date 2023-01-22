@@ -12,22 +12,32 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.util.List;
 
+/**
+ * Client to talk to the snapshot archive server
+ *
+ * @author tmulle
+ */
 @Path("/archive")
 @RegisterRestClient(configKey = "snapshotClient")
 public interface SnapshotArchiveClient {
 
     @DELETE
     @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
     Response deleteFile(@PathParam("id") String id);
 
     @POST
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    @Produces(MediaType.APPLICATION_JSON)
     Response uploadFile(@RestForm File file, @QueryParam("ticketNumber") String ticketNumber);
 
     @GET
     @Path("/count")
+    @Produces(MediaType.APPLICATION_JSON)
     Response getCount();
 
     @GET
+    @Produces(MediaType.APPLICATION_JSON)
     List<FileInfo> getAll(@QueryParam("ticketNumber") String ticketNumber,
                           @QueryParam("startDate") String startDate,
                           @QueryParam("endDate") String endDate,
@@ -38,6 +48,7 @@ public interface SnapshotArchiveClient {
 
     @GET
     @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
     FileInfo getFileInfo(@PathParam("id") String id);
 
     @GET
@@ -48,6 +59,7 @@ public interface SnapshotArchiveClient {
 
     @GET
     @Path("/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
     FileInfo getInfo(@PathParam("id") String fileId);
 
     @ClientExceptionMapper(priority = 100)

@@ -18,6 +18,11 @@ import javax.json.JsonObject;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Lists records by optional filters
+ *
+ * @author tmulle
+ */
 @Command(description = "Return a list of records", name = "list")
 public class ListCommand extends ReusableOptions implements Runnable {
 

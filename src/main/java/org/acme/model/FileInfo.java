@@ -8,6 +8,11 @@ import lombok.ToString;
 import java.util.Date;
 import java.util.Map;
 
+/**
+ * Class that holds information returned about a file
+ *
+ * @author tmulle
+ */
 @NoArgsConstructor
 @Getter
 @ToString

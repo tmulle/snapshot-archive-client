@@ -11,6 +11,11 @@ import picocli.CommandLine.Command;
 import javax.inject.Inject;
 import java.io.IOException;
 
+/**
+ * Retrieves info for a single record
+ *
+ * @author tmulle
+ */
 @Command(description = "Fetch info for a file", name = "info")
 public class InfoCommand extends ReusableOptions implements Runnable {
 
