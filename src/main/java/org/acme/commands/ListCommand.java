@@ -3,18 +3,12 @@ package org.acme.commands;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.acme.client.SnapshotArchiveClient;
 import org.acme.model.FileInfo;
-import org.eclipse.microprofile.rest.client.inject.RestClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
-import picocli.CommandLine.Parameters;
 
 import javax.inject.Inject;
-import javax.json.Json;
-import javax.json.JsonArray;
-import javax.json.JsonArrayBuilder;
-import javax.json.JsonObject;
 import java.io.IOException;
 import java.util.List;
 
